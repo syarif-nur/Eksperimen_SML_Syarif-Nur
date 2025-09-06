@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 
 # Load dataset
-df = pd.read_csv("../WineQT_raw.csv")
+df = pd.read_csv("WineQT_raw.csv")
 
 # Drop kolom Id jika ada
 if 'Id' in df.columns:
@@ -24,6 +24,6 @@ df[num_cols] = scaler.fit_transform(df[num_cols])
 df['label'] = (df['quality'] >= 6).astype(int)
 
 # Simpan hasil preprocessing ke file baru
-df.to_csv("wine-qt_preprocessing.csv", index=False)
+df.to_csv("preprocessing/wine-qt_preprocessing.csv", index=False)
 
 print("Preprocessing selesai. File hasil: wine-qt_preprocessing.csv")
