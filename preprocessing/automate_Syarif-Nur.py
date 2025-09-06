@@ -26,4 +26,4 @@ df['label'] = (df['quality'] >= 6).astype(int)
 # Simpan hasil preprocessing ke file baru
 df.to_csv("preprocessing/wine-qt_preprocessing.csv", index=False)
 
-print("Preprocessing selesai. File hasil: wine-qt_preprocessing.csv")
+print("Preprocessing selesai. File hasil: preprocessing/wine-qt_preprocessing.csv")
