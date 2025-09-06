@@ -1,1 +1,22 @@
 
+name: WineQT Preprocessing
+
+on: [push, pull_request]
+
+jobs:
+  preprocess:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pandas numpy scikit-learn
+
+      - name: Run preprocessing script
+        run: python preprocessing/automate_Syarif-Nur.py
