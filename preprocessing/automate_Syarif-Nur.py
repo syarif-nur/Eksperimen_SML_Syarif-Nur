@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 
 # Load dataset
-df = pd.read_csv("../WineQT_Raw.csv")
+df = pd.read_csv("../WineQT_raw.csv")
 
 # Drop kolom Id jika ada
 if 'Id' in df.columns:
